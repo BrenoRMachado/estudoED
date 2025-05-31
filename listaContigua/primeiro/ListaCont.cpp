@@ -73,6 +73,16 @@ void ListaCont :: removeFinal()
     }
 }
 
+void ListaCont :: insereK(int val)
+{
+
+}
+
+void ListaCont :: removeK()
+{
+
+}
+
 
 
 
