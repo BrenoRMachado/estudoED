@@ -14,8 +14,8 @@ class ListaCont{
 
     void insereFinal(int val);
     void removeFinal();
-    void insereK(int val);
-    void removeK();
+    void insereK(int k , int val);
+    void removeK(int k);
 
 
 
