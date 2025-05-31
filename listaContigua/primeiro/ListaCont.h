@@ -9,8 +9,8 @@ class ListaCont{
 
     ListaCont(int tam);
     ~ListaCont();
-    int get();
-    void set();
+    int get(int k);
+    void set(int k, int valor);
 
     void insereFinal();
     void removeFinal();

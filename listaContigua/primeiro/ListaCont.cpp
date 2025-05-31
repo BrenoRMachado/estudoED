@@ -19,6 +19,29 @@ ListaCont :: ~ListaCont() //destrutor da nossa lista
     delete [] vet;
 }
 
+int ListaCont :: get(int k)
+{
+    if(k<n)
+    {
+        cout << "Nó inexistente" <<endl;
+        exit(1);
+    }
+    //método de consulta, quero saber qual o valor do nó k
+    return vet[k]; 
+}
+
+void ListaCont :: set(int k ,  int valor)
+{
+    if(k<n)
+    {
+        cout << "Nó inexistente" <<endl;
+        exit(1);
+    }
+    //método de alteração, quero alterar o valor do nó k
+    vet[k] = valor;
+}
+
+
 
 
 
