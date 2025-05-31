@@ -60,6 +60,19 @@ void ListaCont :: insereFinal(int val)
     }
 }
 
+void ListaCont :: removeFinal()
+{
+    //só transformar o ultimo em lixo de memória
+    if( n == 0)
+    {
+        cout << "Lista vazia!" <<endl;
+    }
+    else
+    {
+        n--; //diminuindo o tamanho do vetor
+    }
+}
+
 
 
 
