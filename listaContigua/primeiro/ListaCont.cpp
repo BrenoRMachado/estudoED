@@ -95,11 +95,20 @@ void ListaCont :: insereK(int k , int val)
 
 void ListaCont :: removeK(int k)
 {
-    for(int i = k ; i<n-1 ; i++)
+    if( n == 0 )
     {
-        vet[i] = vet[i+1];
+        cout << "A Lista está vazia!"<<endl;
+    }else if( k >= 0 && k<n)
+    {
+        for(int i = k ; i<n-1 ; i++)
+        {
+            vet[i] = vet[i+1];
+        }
+        n--; //tem que lembrar de decrementar o n a cada nó removido
+    }else
+    {
+        cout << "Indice inválido!" <<endl;
     }
-    n--; //tem que lembrar de decrementar o n a cada nó removido
 }
 
 
