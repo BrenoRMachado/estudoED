@@ -46,6 +46,8 @@ void ListaCont :: set(int k ,  int val)
 
 void ListaCont :: insereFinal(int val)
 {
+    //só adicionar no n, já que n vai ser o próximo nó
+    // se n = 0, o  indice n é o único nó
     if( n == max)
     {
         cout << "Lista está cheia!"<<endl;
@@ -56,7 +58,6 @@ void ListaCont :: insereFinal(int val)
         vet[n] = val;
         n ++;
     }
-
 }
 
 
