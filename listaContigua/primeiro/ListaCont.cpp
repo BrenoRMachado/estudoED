@@ -75,7 +75,11 @@ void ListaCont :: removeFinal()
 
 void ListaCont :: insereK(int k , int val)
 {
-    
+    for(int i = n ; i > k ; i--)
+    {
+        vet[n] = vet[n-1];
+    }
+    vet[k] = val;
 }
 
 void ListaCont :: removeK(int k)
