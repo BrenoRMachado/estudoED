@@ -7,7 +7,7 @@ class ListaCont{
     
     public:
 
-    ListaCont();
+    ListaCont(int tam);
     ~ListaCont();
     int get();
     void set();
