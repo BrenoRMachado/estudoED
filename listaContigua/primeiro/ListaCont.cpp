@@ -40,7 +40,6 @@ void ListaCont :: set(int k ,  int val)
         vet[k] = val;
     } else{
         cout << "nó inexistente" <<endl;
-        exit(1);
     }
 }
 
@@ -51,7 +50,6 @@ void ListaCont :: insereFinal(int val)
     if( n == max)
     {
         cout << "Lista está cheia!"<<endl;
-        exit(1);
     }
     else 
     {
@@ -110,11 +108,3 @@ void ListaCont :: removeK(int k)
         cout << "Indice inválido!" <<endl;
     }
 }
-
-
-
-
-
-
-
-
