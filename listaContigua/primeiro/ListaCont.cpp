@@ -77,9 +77,10 @@ void ListaCont :: insereK(int k , int val)
 {
     for(int i = n ; i > k ; i--)
     {
-        vet[n] = vet[n-1];
+        vet[i] = vet[i-1];
     }
     vet[k] = val;
+    n++; //tem que lembrar de incrementar o n a cada novo nó
 }
 
 void ListaCont :: removeK(int k)
