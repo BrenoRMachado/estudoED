@@ -21,24 +21,27 @@ ListaCont :: ~ListaCont() //destrutor da nossa lista
 
 int ListaCont :: get(int k)
 {
-    if(k<n)
+    //método de consulta, quero saber qual o valor do nó k
+    if( k >= 0 && k < n)
     {
-        cout << "Nó inexistente" <<endl;
+        return vet[k]; 
+    } else{
+        cout << "nó inexistente" <<endl;
         exit(1);
     }
-    //método de consulta, quero saber qual o valor do nó k
-    return vet[k]; 
+    
 }
 
 void ListaCont :: set(int k ,  int valor)
 {
-    if(k<n)
+    //método de alteração, quero alterar o valor do nó k
+    if( k >= 0 && k < n)
     {
-        cout << "Nó inexistente" <<endl;
+        vet[k] = valor;
+    } else{
+        cout << "nó inexistente" <<endl;
         exit(1);
     }
-    //método de alteração, quero alterar o valor do nó k
-    vet[k] = valor;
 }
 
 
