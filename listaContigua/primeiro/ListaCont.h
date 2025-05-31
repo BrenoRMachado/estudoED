@@ -1,0 +1,6 @@
+class ListaCont{
+    
+    private:
+    
+    public:
+};
