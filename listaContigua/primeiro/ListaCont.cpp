@@ -46,21 +46,17 @@ void ListaCont :: set(int k ,  int val)
 
 void ListaCont :: insereFinal(int val)
 {
-    if( n < max)
+    if( n == max)
     {
-        if( n == 0)
-        {
-            vet[n] = val;
-        }else
-        {
-            vet[n+1] = val;
-        }
+        cout << "Lista está cheia!"<<endl;
+        exit(1);
     }
     else 
     {
-        cout << "Lista cheia"<<endl;
-        exit(1);
+        vet[n] = val;
+        n ++;
     }
+
 }
 
 
