@@ -32,16 +32,21 @@ int ListaCont :: get(int k)
     
 }
 
-void ListaCont :: set(int k ,  int valor)
+void ListaCont :: set(int k ,  int val)
 {
     //método de alteração, quero alterar o valor do nó k
     if( k >= 0 && k < n)
     {
-        vet[k] = valor;
+        vet[k] = val;
     } else{
         cout << "nó inexistente" <<endl;
         exit(1);
     }
+}
+
+void ListaCont :: insereFinal(int val)
+{
+
 }
 
 

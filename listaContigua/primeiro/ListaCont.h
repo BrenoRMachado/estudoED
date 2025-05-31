@@ -12,9 +12,9 @@ class ListaCont{
     int get(int k);
     void set(int k, int valor);
 
-    void insereFinal();
+    void insereFinal(int val);
     void removeFinal();
-    void insereK();
+    void insereK(int val);
     void removeK();
 
 
