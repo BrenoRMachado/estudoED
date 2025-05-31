@@ -75,12 +75,22 @@ void ListaCont :: removeFinal()
 
 void ListaCont :: insereK(int k , int val)
 {
-    for(int i = n ; i > k ; i--)
+    if( n == max ) //vetor não pode estar cheio
     {
-        vet[i] = vet[i-1];
+        cout<< "Vetor cheio!" <<endl;
+    } else if( k >= 0 && k<n)
+    {
+        for(int i = n ; i > k ; i--)
+        {
+            vet[i] = vet[i-1];
+        }
+        vet[k] = val;
+        n++; //tem que lembrar de incrementar o n a cada novo nó
+    }else
+    {
+        cout << "Indice Inválido!" <<endl;
     }
-    vet[k] = val;
-    n++; //tem que lembrar de incrementar o n a cada novo nó
+
 }
 
 void ListaCont :: removeK(int k)
