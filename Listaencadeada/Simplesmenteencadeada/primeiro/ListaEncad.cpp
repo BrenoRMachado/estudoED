@@ -19,3 +19,17 @@ void ListaEncad :: insereInicio(int val)
 
     primeiro = p;   //o endereço  que o ponteiro primeiro aponta vai ser o endereço do nó (objeto)
 }
+
+bool ListaEncad :: busca(int val)
+{
+    //precisamos começar a busca do primeiro elemento
+    //como temos certeza que começamos por ele?
+    No * p = primeiro; //pronto
+    while( p != NULL) //vamos olhar todos os nós até chegar no final da lista
+    {
+        if( p->getInfo() == val )   //verificamos se o valor é = o buscado
+            return true;
+        p = p->getProx();   //andamos para o próximo nó usando o ponteiro do atual
+    }
+    return false;
+}
