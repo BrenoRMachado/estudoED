@@ -8,7 +8,16 @@ ListaEncad :: ListaEncad()
 }
 
 ListaEncad :: ~ListaEncad()
-{}
+{
+    No *p = primeiro; //devemos começar a destruir a lista pelo começo
+    while ( p != NULL)
+    {
+        No * t = p->getProx(); //fazemos um ponteiro novo apontar para o próximo, já que o atual vai ser apagado
+        //se não perderiamos o ponteiro para o próximo
+        delete p; //apaga o conteúdo apontado pelo p, mas mantem o ponteiro p
+        p = t;
+    }
+}
 
 void ListaEncad :: insereInicio(int val)
 {
