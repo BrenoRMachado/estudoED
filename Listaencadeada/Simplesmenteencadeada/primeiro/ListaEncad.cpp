@@ -20,7 +20,7 @@ void ListaEncad :: insereInicio(int val)
     primeiro = p;   //o endereço  que o ponteiro primeiro aponta vai ser o endereço do nó (objeto)
 }
 
-bool ListaEncad :: busca(int val)
+/* bool ListaEncad :: busca(int val)
 {
     //precisamos começar a busca do primeiro elemento
     //como temos certeza que começamos por ele?
@@ -30,6 +30,19 @@ bool ListaEncad :: busca(int val)
         if( p->getInfo() == val )   //verificamos se o valor é = o buscado
             return true;
         p = p->getProx();   //andamos para o próximo nó usando o ponteiro do atual
+    }
+    return false;
+}
+*/
+
+// podemos fazer com for :
+
+bool ListaEncad :: busca(int val)
+{
+    for( No * p = primeiro ; p->getInfo() != NULL ; p = p->getProx())
+    {
+        if( p->getInfo() == val)
+            return true;
     }
     return false;
 }
