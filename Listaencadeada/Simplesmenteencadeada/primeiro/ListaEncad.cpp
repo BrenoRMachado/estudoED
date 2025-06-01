@@ -73,6 +73,10 @@ void ListaEncad :: removeInicio()
         p = primeiro; // o ponteiro que criamos vai receber o endereço do primeiro valor para podermos apaga-lo com o delete
         primeiro = p->getProx(); //o próximo nó será o primeiro
         delete p;
+    } else
+    {
+        // rotina_erro(1); //precisamos saber caso ela esteja vazia, então podemos declarar uma função que faça isso 
     }
+
     //não precisamos corrigir posições pois não estamos em um vetor
 }
