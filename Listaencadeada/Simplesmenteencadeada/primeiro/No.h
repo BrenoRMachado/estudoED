@@ -1,8 +1,8 @@
 class No
 {
     private:
-    int info;
-    No *prox;
+    int info; //informação (valor do nó)
+    No *prox; //ponteiro para o próximo nó
 
     public:
     No();
