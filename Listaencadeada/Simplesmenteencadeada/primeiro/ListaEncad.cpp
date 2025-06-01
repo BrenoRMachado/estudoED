@@ -4,13 +4,13 @@ using namespace std;
 
 ListaEncad :: ListaEncad()
 {
-    primeiro = NULL; //com a lista vazia, o primeiro não deve apontar para ninguém
+    primeiro = nullptr; //com a lista vazia, o primeiro não deve apontar para ninguém
 }
 
 ListaEncad :: ~ListaEncad()
 {
     No *p = primeiro; //devemos começar a destruir a lista pelo começo
-    while ( p != NULL)
+    while ( p != nullptr)
     {
         No * t = p->getProx(); //fazemos um ponteiro novo apontar para o próximo, já que o atual vai ser apagado
         //se não perderiamos o ponteiro para o próximo
@@ -34,7 +34,7 @@ void ListaEncad :: insereInicio(int val)
     //precisamos começar a busca do primeiro elemento
     //como temos certeza que começamos por ele?
     No * p = primeiro; //pronto
-    while( p != NULL) //vamos olhar todos os nós até chegar no final da lista
+    while( p != nullptr) //vamos olhar todos os nós até chegar no final da lista
     {
         if( p->getInfo() == val )   //verificamos se o valor é = o buscado
             return true;
@@ -48,7 +48,7 @@ void ListaEncad :: insereInicio(int val)
 
 bool ListaEncad :: busca(int val)
 {
-    for( No * p = primeiro ; p->getInfo() != NULL ; p = p->getProx())
+    for( No * p = primeiro ; p->getInfo() != nullptr ; p = p->getProx())
     {
         if( p->getInfo() == val)
             return true;
