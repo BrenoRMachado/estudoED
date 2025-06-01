@@ -55,3 +55,12 @@ bool ListaEncad :: busca(int val)
     }
     return false;
 }
+
+void ListaEncad :: imprime()
+{
+    for( No * p = primeiro ; p != nullptr ; p = p->getProx() )
+    {
+        cout << p->getInfo() << " ";
+    }
+    cout << endl;
+}
