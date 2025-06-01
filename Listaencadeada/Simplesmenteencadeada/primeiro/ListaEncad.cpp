@@ -48,7 +48,7 @@ void ListaEncad :: insereInicio(int val)
 
 bool ListaEncad :: busca(int val)
 {
-    for( No * p = primeiro ; p->getInfo() != nullptr ; p = p->getProx())
+    for( No * p = primeiro ; p->getProx() != nullptr ; p = p->getProx())
     {
         if( p->getInfo() == val)
             return true;
