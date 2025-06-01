@@ -64,3 +64,15 @@ void ListaEncad :: imprime()
     }
     cout << endl;
 }
+
+void ListaEncad :: removeInicio()
+{
+    No * p; 
+    if(primeiro != nullptr) //precisamos ter certeza que existe algum elemento
+    {
+        p = primeiro; // o ponteiro que criamos vai receber o endereço do primeiro valor para podermos apaga-lo com o delete
+        primeiro = p->getProx(); //o próximo nó será o primeiro
+        delete p;
+    }
+    //não precisamos corrigir posições pois não estamos em um vetor
+}

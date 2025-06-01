@@ -10,4 +10,5 @@ class ListaEncad{
     void insereInicio(int val);
     bool busca(int val);
     void imprime();
+    void removeInicio();
 };
