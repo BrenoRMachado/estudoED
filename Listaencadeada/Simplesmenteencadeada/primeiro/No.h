@@ -10,9 +10,7 @@ class No
 
     int getInfo();
     No* getProx();
-    void setInfo();
-    void setProx();
-
-
+    void setInfo(int val);
+    void setProx(No * p);
 
 };

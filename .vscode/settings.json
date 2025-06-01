@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "new": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "memory_resource": "cpp",
+        "type_traits": "cpp"
     }
 }
