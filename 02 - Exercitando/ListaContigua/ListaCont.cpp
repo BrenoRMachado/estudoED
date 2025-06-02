@@ -85,7 +85,7 @@ void ListaCont :: insereK(int k, int val)
             {
                 vet[i] = vet[i-1];
             }
-            vet[k] = val;
+            setNo(k , val);
             n++;
         }
         else{
