@@ -9,12 +9,12 @@ class ListaCont{
     ~ListaCont();
 
     int getNo(int k); //indice k para identificar qual nó
-    void setNo(int k); //indice k para identificar qual nó
+    void setNo(int k, int val); //indice k para identificar qual nó
     
     void insereFinal(int val);
     void removeFinal();
 
     void insereK(int k, int val);
     void removeK(int k);
-    
+
 };

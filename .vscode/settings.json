@@ -3,6 +3,7 @@
         "new": "cpp",
         "iostream": "cpp",
         "memory_resource": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "ostream": "cpp"
     }
 }
