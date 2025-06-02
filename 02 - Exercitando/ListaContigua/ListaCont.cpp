@@ -42,7 +42,6 @@ void ListaCont :: setNo(int k , int val)
     else
     {
         cout << "Indice Inválido" << endl;
-        exit(1);
     }
 }
 
