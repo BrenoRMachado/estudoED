@@ -17,4 +17,6 @@ class ListaCont{
     void insereK(int k, int val);
     void removeK(int k);
 
+    void imprimirLista();
+
 };

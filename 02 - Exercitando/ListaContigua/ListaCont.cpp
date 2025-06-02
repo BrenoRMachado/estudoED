@@ -118,3 +118,11 @@ void ListaCont :: removeK(int k)
         cout << "Vetor Vazio!" <<endl;
     }
 }
+
+void ListaCont :: imprimirLista()
+{
+    for(int i = 0 ; i < n ; i++)
+    {
+        cout << vet[i] << " ";
+    }
+}
