@@ -126,3 +126,13 @@ void ListaCont :: imprimirLista()
         cout << vet[i] << " ";
     }
 }
+
+int ListaCont :: numeroNos()
+{
+    int quantidade = 0;
+    for(int i = 0; i<n ; i++)
+    {
+        quantidade++;
+    }
+    return quantidade;
+}

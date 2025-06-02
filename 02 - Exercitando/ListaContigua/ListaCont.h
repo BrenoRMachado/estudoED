@@ -18,5 +18,6 @@ class ListaCont{
     void removeK(int k);
 
     void imprimirLista();
+    int numeroNos();
 
 };

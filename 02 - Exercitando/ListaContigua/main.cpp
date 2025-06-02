@@ -18,6 +18,7 @@ int main()
     }
     cout << "Aqui está sua lista: " <<endl;
     lista.imprimirLista();
+    cout << "\nSua lista tem " << lista.numeroNos() << " nohs!"<<endl;
     
     return 0;
 }
