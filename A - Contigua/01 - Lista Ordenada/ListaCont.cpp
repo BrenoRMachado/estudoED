@@ -28,6 +28,8 @@ int ListaCont :: getNo(int k)
     }
 }
 
+/*
+
 void ListaCont :: setNo(int k , int val)
 {
 
@@ -41,7 +43,9 @@ void ListaCont :: setNo(int k , int val)
     }
 }
 
-void ListaCont :: insereFinal(int val)
+*/
+
+void ListaCont :: insere(int val)
 {
 
     if(n < max)
@@ -54,7 +58,7 @@ void ListaCont :: insereFinal(int val)
         cout << "Vetor cheio" <<endl;
     }
 }
-void ListaCont :: removeFinal()
+void ListaCont :: remove()
 {
 
     if( n != 0)
@@ -66,6 +70,8 @@ void ListaCont :: removeFinal()
         cout << "Vetor vazio" <<endl;
     }
 }
+
+/*
 
 void ListaCont :: insereK(int k, int val)
 {
@@ -91,6 +97,8 @@ void ListaCont :: insereK(int k, int val)
     }
 
 }
+
+
 void ListaCont :: removeK(int k)
 {
 
@@ -111,6 +119,9 @@ void ListaCont :: removeK(int k)
     }
 }
 
+*/
+
+
 void ListaCont :: imprimirLista()
 {
     for(int i = 0 ; i < n ; i++)
@@ -127,4 +138,40 @@ int ListaCont :: numeroNos()
         quantidade++;
     }
     return quantidade;
+}
+
+// TODO: Novos métodos
+
+int ListaCont :: buscaBinaria(int val)
+{
+    int esq = 0; //indice menor
+    int dir = n-1;  //indice maior
+
+    while(esq <= dir) //enquanto o menor não alcança o maior
+    {
+        int meio = (esq + dir) / 2 ; //vamos usa-lo para dividir a lista na metáde e descobrir em qual porção o valor está
+        //por ser um while, lembra que teremos meios diferentes à medida que o código avança. No pior caso, dividimos a lista em várias até achar ele
+        if(val > vet[meio])
+        {
+            //se o valor existir, vai estar depois do meio
+            esq = meio + 1; //leva o menor indice pra porção após o meio
+        }
+        else if(val < vet[meio])
+        {
+            //se o valor existir, vai estar antes do meio
+            dir = meio - 1; //leva o maior indice pra porção antes do meio
+        }
+        else
+        {
+            //se o valor existir, é o do meio
+            return meio;
+        }
+        //se não existir:
+        return -1;
+    }
+}
+
+bool ListaCont :: busca(int val)
+{
+
 }
