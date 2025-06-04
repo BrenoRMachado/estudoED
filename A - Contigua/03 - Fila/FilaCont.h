@@ -1,12 +1,12 @@
-class ListaCont{
+class FilaCont{
     private:
     int max;
     int n; 
     int *vet; 
 
     public:
-    ListaCont(int val); 
-    ~ListaCont(); 
+    FilaCont(int val); 
+    ~FilaCont(); 
 
     int getNo(int k); 
     void setNo(int k, int val); 

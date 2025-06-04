@@ -1,20 +1,20 @@
 #include <iostream>
-#include "ListaCont.h"
+#include "FilaCont.h"
 using namespace std;
 
-ListaCont :: ListaCont(int val)
+FilaCont :: FilaCont(int val)
 {
     max = val;
     n = 0; 
     vet = new int [max];
 }
 
-ListaCont :: ~ListaCont()
+FilaCont :: ~FilaCont()
 {
     delete [] vet;
 }
 
-int ListaCont :: getNo(int k)
+int FilaCont :: getNo(int k)
 {
 
     if( k >= 0 && k<n ) 
@@ -28,7 +28,7 @@ int ListaCont :: getNo(int k)
     }
 }
 
-void ListaCont :: setNo(int k , int val)
+void FilaCont :: setNo(int k , int val)
 {
 
     if( k>= 0 && k < n)
@@ -41,7 +41,7 @@ void ListaCont :: setNo(int k , int val)
     }
 }
 
-void ListaCont :: insereFinal(int val)
+void FilaCont :: insereFinal(int val)
 {
 
     if(n < max)
@@ -54,7 +54,7 @@ void ListaCont :: insereFinal(int val)
         cout << "Vetor cheio" <<endl;
     }
 }
-void ListaCont :: removeFinal()
+void FilaCont :: removeFinal()
 {
 
     if( n != 0)
@@ -68,7 +68,7 @@ void ListaCont :: removeFinal()
     
 }
 
-void ListaCont :: insereK(int k, int val)
+void FilaCont :: insereK(int k, int val)
 {
 
     if( n < max ) 
@@ -92,7 +92,7 @@ void ListaCont :: insereK(int k, int val)
     }
 
 }
-void ListaCont :: removeK(int k)
+void FilaCont :: removeK(int k)
 {
 
     if( n != 0)
@@ -112,7 +112,7 @@ void ListaCont :: removeK(int k)
     }
 }
 
-void ListaCont :: imprimirLista()
+void FilaCont :: imprimirLista()
 {
     for(int i = 0 ; i < n ; i++)
     {
@@ -120,7 +120,7 @@ void ListaCont :: imprimirLista()
     }
 }
 
-int ListaCont :: numeroNos()
+int FilaCont :: numeroNos()
 {
     int quantidade = 0;
     for(int i = 0; i<n ; i++)
