@@ -5,7 +5,7 @@ using namespace std;
 ListaCont :: ListaCont(int val)
 {
     max = val;
-    n = 0;
+    topo = -1; //Como a lista ainda está vazia, o topo não existe.
     vet = new int [max]; 
 }
 
@@ -14,20 +14,20 @@ ListaCont :: ~ListaCont()
     delete [] vet;
 }
 
-int ListaCont :: getNo(int k)
+int ListaCont :: getTopo()
 {
-
-    if( k >= 0 && k<n ) 
+    if(topo != -1)
     {
-        return vet[k];
+        return vet[topo];
     }
-    else 
+    else
     {
-        cout << "Indice Inválido" << endl;
+        cout << "Pilha vazia!" <<endl;
         exit(1);
     }
 }
 
+/*
 void ListaCont :: setNo(int k , int val)
 {
 
@@ -109,6 +109,41 @@ void ListaCont :: removeK(int k)
     else
     {
         cout << "Vetor Vazio!" <<endl;
+    }
+}
+
+*/
+
+bool ListaCont :: vazia()
+{
+    return (topo == -1);
+}
+
+void ListaCont :: empilha(int val)
+{
+    if(topo < (max-1))
+    {
+        topo++;
+        vet[topo] = val;
+    }
+    else
+    {
+        cout << "Pilha cheia!"<<endl;
+        exit(2);
+    }
+}
+
+int ListaCont :: desempilha()
+{
+    if(topo > -1)
+    {
+        topo--; //diminuir o topo ja faz a pilha diminuir
+        return vet[topo+1]; //retorna o valor desempilhada (as vezes é necessário saber quem vc tirou, talvez para usa-lo)
+    }
+    else 
+    {
+        cout << "Pilha vazia!"<<endl;
+        exit(1);
     }
 }
 

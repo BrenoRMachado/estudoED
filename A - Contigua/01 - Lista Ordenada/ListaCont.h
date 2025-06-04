@@ -19,11 +19,10 @@ class ListaCont{
     //void insereK(int k, int val);
     //void removeK(int k);
 
+    // TODO: Novo método:
+    bool busca(int val); //vai utilizar a busca binária para encontrar o índice do valor desejado
+
     void imprimirLista();
     int numeroNos(); 
-
-    // TODO: Novo método:
-    
-    bool busca(int val); //vai utilizar a busca binária para encontrar o índice do valor desejado
 
 };
