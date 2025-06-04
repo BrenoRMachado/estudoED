@@ -47,10 +47,14 @@ void ListaCont :: setNo(int k , int val)
 
 void ListaCont :: insere(int val)
 {
-
+    int i;
     if(n < max)
     {
-        vet[n] = val;
+        for(i = n-1; i>=0 && vet[i] >= val; i--) //vai descendo no vetor até achar um valor menor que val
+        {
+            vet[i+1] = vet[i]; //passa os valores maiores que val para a direita 
+        }
+        vet[i+1] = val; //i+1 é = a o primeiro índice em que o valor é menor que val,  + 1. Dai adicionamos o valo no lugar em que há um valor clonado( pois antes do loop encerrar, o anterior foi copiado para a direita)
         n++;
     }
     else 
