@@ -149,7 +149,7 @@ int ListaCont :: desempilha()
 
 void ListaCont :: imprimirLista()
 {
-    for(int i = 0 ; i < n ; i++)
+    for(int i = 0 ; i < topo ; i++)
     {
         cout << vet[i] << " ";
     }
@@ -158,7 +158,7 @@ void ListaCont :: imprimirLista()
 int ListaCont :: numeroNos()
 {
     int quantidade = 0;
-    for(int i = 0; i<n ; i++)
+    for(int i = 0; i<topo ; i++)
     {
         quantidade++;
     }
