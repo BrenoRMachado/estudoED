@@ -173,5 +173,6 @@ int ListaCont :: buscaBinaria(int val)
 
 bool ListaCont :: busca(int val)
 {
-
+    int k = buscaBinaria(val); //encontramos o índice do valor desejado
+    return (k>= 0 && k<n); //retorna true se o índice for válido (achamos o valor na lista)
 }
