@@ -14,7 +14,7 @@ class ListaCont{
     //void setNo(int k, int val);  //Não temos mais o set
     
     void insere(int val); //agora só temos 1 método para inserir. Ele insere de forma a manter a fila ordenada
-    void remove(); //Agora só temos 1 método para remover. Ele remove de forma a manter a fila ordenada
+    void remove(int val); //Agora só temos 1 método para remover. Ele remove de forma a manter a fila ordenada
 
     //void insereK(int k, int val);
     //void removeK(int k);

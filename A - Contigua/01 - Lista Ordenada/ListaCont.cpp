@@ -62,16 +62,16 @@ void ListaCont :: insere(int val)
         cout << "Vetor cheio" <<endl;
     }
 }
-void ListaCont :: remove()
+void ListaCont :: remove(int val)
 {
-
-    if( n != 0)
+    int k = buscaBinaria(val); //obtemos o índice do valor que desejamos remover
+    if( k >= 0 && k < n) //não precisamos verificar se o vetor já está vazio, se o buscaBinaria retornar -1, já concluímos que o valor não está em nenhum lugar
     {
-        n --;
-    }
-    else 
-    {
-        cout << "Vetor vazio" <<endl;
+        for(int i = k ; i<n-1 ; i++) //a partir do valor que desejamos remover, vamos copiando os valores da direita para esquerda 
+        {
+            vet[i] = vet[i+1]; 
+        }
+        n--; // A lista diminuiu. O valor da extremidade foi desconsiderado.
     }
 }
 
@@ -170,9 +170,9 @@ int ListaCont :: buscaBinaria(int val)
             //se o valor existir, é o do meio
             return meio;
         }
-        //se não existir:
-        return -1;
     }
+    //se não existir:
+    return -1;
 }
 
 bool ListaCont :: busca(int val)
