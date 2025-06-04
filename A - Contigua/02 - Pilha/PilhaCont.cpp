@@ -1,20 +1,20 @@
 #include <iostream>
-#include "ListaCont.h"
+#include "PilhaCont.h"
 using namespace std;
 
-ListaCont :: ListaCont(int val)
+PilhaCont :: PilhaCont(int val)
 {
     max = val;
     topo = -1; //Como a lista ainda está vazia, o topo não existe.
     vet = new int [max]; 
 }
 
-ListaCont :: ~ListaCont()
+PilhaCont :: ~PilhaCont()
 {
     delete [] vet;
 }
 
-int ListaCont :: getTopo()
+int PilhaCont :: getTopo()
 {
     if(topo != -1)
     {
@@ -28,7 +28,7 @@ int ListaCont :: getTopo()
 }
 
 /*
-void ListaCont :: setNo(int k , int val)
+void PilhaCont :: setNo(int k , int val)
 {
 
     if( k>= 0 && k < n)
@@ -41,7 +41,7 @@ void ListaCont :: setNo(int k , int val)
     }
 }
 
-void ListaCont :: insereFinal(int val)
+void PilhaCont :: insereFinal(int val)
 {
 
     if(n < max)
@@ -54,7 +54,7 @@ void ListaCont :: insereFinal(int val)
         cout << "Vetor cheio" <<endl;
     }
 }
-void ListaCont :: removeFinal()
+void PilhaCont :: removeFinal()
 {
 
     if( n != 0)
@@ -68,7 +68,7 @@ void ListaCont :: removeFinal()
     
 }
 
-void ListaCont :: insereK(int k, int val)
+void PilhaCont :: insereK(int k, int val)
 {
 
     if( n < max ) 
@@ -92,7 +92,7 @@ void ListaCont :: insereK(int k, int val)
     }
 
 }
-void ListaCont :: removeK(int k)
+void PilhaCont :: removeK(int k)
 {
 
     if( n != 0)
@@ -114,12 +114,12 @@ void ListaCont :: removeK(int k)
 
 */
 
-bool ListaCont :: vazia()
+bool PilhaCont :: vazia()
 {
     return (topo == -1);
 }
 
-void ListaCont :: empilha(int val)
+void PilhaCont :: empilha(int val)
 {
     if(topo < (max-1))
     {
@@ -133,7 +133,7 @@ void ListaCont :: empilha(int val)
     }
 }
 
-int ListaCont :: desempilha()
+int PilhaCont :: desempilha()
 {
     if(topo > -1)
     {
@@ -147,7 +147,7 @@ int ListaCont :: desempilha()
     }
 }
 
-void ListaCont :: imprimirLista()
+void PilhaCont :: imprimirLista()
 {
     for(int i = 0 ; i < topo ; i++)
     {
@@ -155,7 +155,7 @@ void ListaCont :: imprimirLista()
     }
 }
 
-int ListaCont :: numeroNos()
+int PilhaCont :: numeroNos()
 {
     int quantidade = 0;
     for(int i = 0; i<topo ; i++)

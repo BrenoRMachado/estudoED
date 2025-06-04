@@ -1,12 +1,12 @@
-class ListaCont{
+class PilhaCont{
     private:
     int max;
     int topo; //topo é usado para sabermos onde é o topo da lista. Afinal, só empilhamos e desempilhamos no topo 
     int *vet; 
 
     public:
-    ListaCont(int val); 
-    ~ListaCont(); 
+    PilhaCont(int val); 
+    ~PilhaCont(); 
 
     int getTopo(); //getNo virou getTopo, para recebermos onde está o topo.  
     //void setNo(int k, int val); 
