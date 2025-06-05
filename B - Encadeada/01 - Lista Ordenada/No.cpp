@@ -4,13 +4,11 @@
 No :: No()
 {
     info = 0;
-    prox = nullptr; //lista vazia, então prox aponta pra nada
+    prox = nullptr; 
 }
 
 No :: ~No()
-{
-    //como não vamos lidar com nada dinâmico, não precisamos de deletes
-}
+{}
 
 int No :: getInfo()
 {
