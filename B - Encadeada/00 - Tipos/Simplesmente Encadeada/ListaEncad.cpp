@@ -69,4 +69,21 @@ bool ListaEncad :: busca(int val)
     */
 }
 
+void ListaEncad :: removeInicio(int val)
+{
+    // criamos um ponteiro p para fazer a operação de remoção
+    // Nos certificamos que a lista não está vazia
+    // fazemos a remoção fazendo o nosso ponteiro p apontar para primeiro. O primeiro aponta para o primeiro nó, que afinal, está no inicio
+    //  primeiro vai apontar paro o próximo, afinal vamos remover o atual primeiro
+    // deletamos o nó 
+
+    No * p;
+    if(primeiro != nullptr)
+    {
+        p = primeiro;
+        primeiro = p->getProx();
+        delete p;
+    }
+}
+
 
