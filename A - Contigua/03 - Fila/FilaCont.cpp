@@ -5,9 +5,9 @@ using namespace std;
 FilaCont :: FilaCont(int val)
 {
     max = val;
-    //n = 0;
     inicio = 0;
     fim = 0; 
+    n = 0;
     vet = new int [max];
 }
 
@@ -116,6 +116,21 @@ void FilaCont :: removeK(int k)
 }
 */
 
+int FilaCont :: inc(int val)
+{
+    //O método serve para incrementar o inicio e o fim
+    if(val == max-1)
+    {
+        return 0; //nessa situação, o valor que iria ooro final, volta no ínicio
+    }
+    else
+    {
+        return val + 1; //incrementa normalmente, usado quando não precisamos implementar a nossão circular
+    }
+
+    //da substituir a função inteira por return (val+1) % max;
+}
+
 int FilaCont :: getInicio()
 {
     if(!vazia())
@@ -130,10 +145,11 @@ int FilaCont :: getInicio()
 }
 void FilaCont :: enfileira(int val)
 {
-    if(fim < max-1)
+    if(n == max)
     {
         vet[fim] = val;
-        fim++;
+        fim = inc(fim);
+        n++;
     }
     else 
     {
@@ -145,8 +161,10 @@ int FilaCont :: desenfileira()
 {
     if(!vazia())
     {
-        inicio++; // isso pq só desenfileiramos no inicio
-        return vet[inicio -1]; //retorno do valor que estava infileirado, para casos em que seja necessário
+        int val =  vet[inicio]; //atribuimos a outra variável o valor que vai ser removido
+        inicio = inc(inicio); //incrementamos inicio 
+        n--; //diminuimos a quantidade de nós
+        return val; //retornamos o valor removido caso seja necessário
 
     }
     else
@@ -157,7 +175,7 @@ int FilaCont :: desenfileira()
 }
 bool FilaCont :: vazia()
 {
-    return (inicio == fim);
+    return (n == 0);
 }
 
 void FilaCont :: imprimirLista()

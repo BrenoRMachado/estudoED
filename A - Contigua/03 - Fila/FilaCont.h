@@ -3,8 +3,10 @@ class FilaCont{
     int max;
     int inicio; //vai receber o indice do primeiro nó da lista
     int fim; //vai receber o indice do último nó do Índice
-    //int n; 
+    int n; //usado para implementar a ideia de um vetor circular sem causar erro de inicio == fim
     int *vet; 
+
+    int inc(int val); //método que incrementa o índice
 
     public:
     FilaCont(int val); 
