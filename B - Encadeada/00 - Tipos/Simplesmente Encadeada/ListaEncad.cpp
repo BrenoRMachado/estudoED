@@ -30,7 +30,21 @@ void ListaEncad :: insereInicio(int val)
 }
 bool ListaEncad :: busca(int val)
 {
+    //vamos simular uma procura de elemento em vetor
+    //não temos um vetor, temos uma "corrente" de valores
+    // Podemos criar um ponteiro que recebe primeiro e atrávez de um looping, usar os ponetiros para se buscar qual ponteiro aponta para o nó que possui o valor desejado
 
+    No * p = primeiro;
+
+    while( p != nullptr ) //enquanto não chegar no último npo
+    {
+        if(p->getInfo() == val) //comparamos os valores
+        {
+            return true;
+        }
+        p = p->getProx(); //incrementamos o ponteiro fazendo ele apontar pro proximo nó
+    }
+    return false;
 }
 
 
