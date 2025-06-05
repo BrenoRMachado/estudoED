@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ListaEncad.h"
+using namespace std;
 
 ListaEncad :: ListaEncad()
 {
@@ -84,6 +85,12 @@ void ListaEncad :: removeInicio(int val)
         primeiro = p->getProx();
         delete p;
     }
+    else 
+    {
+        cout << "Lista Vazia!"<<endl;
+        exit(1);
+    }
+    
 }
 
 
