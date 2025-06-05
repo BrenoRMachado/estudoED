@@ -16,8 +16,8 @@ class ListaEncad{
     void insereInicio(int val);
     void insereFinal(int val); //com um descritor para o ultimo, podemos inserir no final
     bool busca(int val);
-    void removeInicio(int val);
-    void removeFinal(int val); // "" podemos remover no final
+    void removeInicio();
+    void removeFinal(); // "" podemos remover no final
 
     void imprime();
 };

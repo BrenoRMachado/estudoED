@@ -37,7 +37,7 @@ void ListaEncad :: insereInicio(int val)
     No *p = new No(); //cria o nó
 
     p->setInfo(val);    //atribui o valor de parâmetro para ser o valor desse nó
-    p->setProx(primeiro);   //faz o ponteiro apontar para mesma coisa que primeiro aponta, que é null
+    p->setProx(primeiro);   //faz o ponteiro apontar para mesma coisa que primeiro aponta, que é null. Depois será o primeiro nó
 
     primeiro = p; //primeiro agora aponta para o nó atual
 
@@ -70,7 +70,7 @@ bool ListaEncad :: busca(int val)
     */
 }
 
-void ListaEncad :: removeInicio(int val)
+void ListaEncad :: removeInicio()
 {
     // criamos um ponteiro p para fazer a operação de remoção
     // Nos certificamos que a lista não está vazia

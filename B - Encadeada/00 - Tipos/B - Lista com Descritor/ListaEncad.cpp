@@ -56,7 +56,7 @@ bool ListaEncad :: busca(int val)
 
 }
 
-void ListaEncad :: removeInicio(int val)
+void ListaEncad :: removeInicio()
 {
 
     No * p;
@@ -86,7 +86,7 @@ void ListaEncad :: removeInicio(int val)
     //implemento depois
  }
 
- void ListaEncad :: removeFinal(int val)
+ void ListaEncad :: removeFinal()
  {
     //implemento depois
  }
