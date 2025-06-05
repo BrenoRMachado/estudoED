@@ -10,12 +10,14 @@ class NoDuplo{
     NoDuplo();
     ~NoDuplo();
      
-    int getInfo(); 
+    //teremos gets e sets para os dois ponteiros:
     NoDuplo *getProx(); 
     NoDuplo *getAnt();
 
-    void setInfo(int val); 
     void setProx(NoDuplo *p);
     void setAnt(NoDuplo *p);
-
+    // ------------------------------------------
+    
+    void setInfo(int val); 
+    int getInfo(); 
 };
