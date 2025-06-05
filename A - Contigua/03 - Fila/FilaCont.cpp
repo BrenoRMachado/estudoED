@@ -5,7 +5,9 @@ using namespace std;
 FilaCont :: FilaCont(int val)
 {
     max = val;
-    n = 0; 
+    //n = 0;
+    inicio = 0;
+    fim = 0; 
     vet = new int [max];
 }
 
@@ -14,6 +16,7 @@ FilaCont :: ~FilaCont()
     delete [] vet;
 }
 
+/*
 int FilaCont :: getNo(int k)
 {
 
@@ -111,10 +114,28 @@ void FilaCont :: removeK(int k)
         cout << "Vetor Vazio!" <<endl;
     }
 }
+*/
+
+int FilaCont :: getInicio()
+{
+
+}
+void FilaCont :: enfileira(int val)
+{
+
+}
+void FilaCont :: desenfileira()
+{
+
+}
+bool FilaCont :: vazia()
+{
+    return (inicio == fim);
+}
 
 void FilaCont :: imprimirLista()
 {
-    for(int i = 0 ; i < n ; i++)
+    for(int i = 0 ; i < fim ; i++)
     {
         cout << vet[i] << " ";
     }
@@ -123,7 +144,7 @@ void FilaCont :: imprimirLista()
 int FilaCont :: numeroNos()
 {
     int quantidade = 0;
-    for(int i = 0; i<n ; i++)
+    for(int i = 0; i<fim ; i++)
     {
         quantidade++;
     }
