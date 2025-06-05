@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    /*
+    
     ListaEncad l;
 
     int n, val;
@@ -17,9 +17,9 @@ int main()
         l.insereInicio(val);
     }
 
-    cout << "Aqui está sua lista: " <<endl;
-    l.imprime();
-    */
+    //cout << "Aqui está sua lista: " <<endl;
+    //l.imprime();
+    
 
     return 0;
 }
