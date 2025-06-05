@@ -118,15 +118,42 @@ void FilaCont :: removeK(int k)
 
 int FilaCont :: getInicio()
 {
-
+    if(!vazia())
+    {
+        return vet[inicio];
+    }
+    else
+    {
+        cout << "A Lista está vazia!"<<endl;
+        exit(1);
+    }
 }
 void FilaCont :: enfileira(int val)
 {
-
+    if(fim < max-1)
+    {
+        vet[fim] = val;
+        fim++;
+    }
+    else 
+    {
+        cout << "A lista está cheia!"<<endl;
+        exit(2);
+    }
 }
-void FilaCont :: desenfileira()
+int FilaCont :: desenfileira()
 {
+    if(!vazia())
+    {
+        inicio++; // isso pq só desenfileiramos no inicio
+        return vet[inicio -1]; //retorno do valor que estava infileirado, para casos em que seja necessário
 
+    }
+    else
+    {
+        cout << "A Lista está vazia" <<endl;
+        exit(1);
+    }
 }
 bool FilaCont :: vazia()
 {

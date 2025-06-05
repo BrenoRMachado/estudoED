@@ -23,7 +23,7 @@ class FilaCont{
 
     int getInicio(); 
     void enfileira(int val);
-    void desenfileira();
+    int desenfileira();
     bool vazia();
 
     void imprimirLista();
