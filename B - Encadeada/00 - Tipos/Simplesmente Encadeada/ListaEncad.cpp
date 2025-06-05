@@ -45,6 +45,12 @@ bool ListaEncad :: busca(int val)
         p = p->getProx(); //incrementamos o ponteiro fazendo ele apontar pro proximo nó
     }
     return false;
+
+    //podemos fazer o mesmo com um for 
+    /*
+    for(no*p = primeiro ; p !=null ; p = p->getprox)
+        if...
+    */
 }
 
 
