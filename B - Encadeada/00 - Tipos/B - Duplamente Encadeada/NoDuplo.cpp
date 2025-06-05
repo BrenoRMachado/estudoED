@@ -5,6 +5,7 @@ NoDuplo :: NoDuplo()
 {
     info = 0;
     prox = nullptr;
+    ant = nullptr;
 }
 
 NoDuplo :: ~NoDuplo()
@@ -19,6 +20,11 @@ NoDuplo* NoDuplo :: getProx()
     return prox;
 }
 
+NoDuplo* NoDuplo :: getAnt()
+{
+    return ant;
+}
+
 void NoDuplo :: setInfo(int val)
 {
     info = val;
@@ -26,4 +32,9 @@ void NoDuplo :: setInfo(int val)
 void NoDuplo :: setProx(NoDuplo *p)
 {
     prox = p;
+}
+
+void NoDuplo :: setAnt(NoDuplo *p)
+{
+    ant = p;
 }
