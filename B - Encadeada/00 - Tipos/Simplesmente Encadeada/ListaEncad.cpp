@@ -7,7 +7,23 @@ ListaEncad :: ListaEncad()
 }
 
 ListaEncad :: ~ListaEncad()
-{}
+{
+    //analise ele depois de entender os métodos abaixo:
+
+    // Bora lá: Criamos vários obejtos dinâmicomente, precisamos deleta-los
+    // Vamos percorrer a "corrente" da forma diferente que aprendemos em busca
+    // Em cada laço, deletamos o que o p atual aponta. Mas não podemos deletar o que estamos usando para percorrer
+    // Vamos usar um ponteiro temporário para sempre apontar para o próximo valor de p. Deletamos o atual e no fim o p vai apontar para o que o t apontou.
+    // o ponteiro temporario vai sempre estar na frente de p
+
+    No * p = primeiro;
+    while ( p != nullptr) //enquanto não chega no fim da lista
+    {
+        No * t = p->getProx(); //getProx para t apontar para o próximo, dessa forma não perdemos nosso meio de locomoção 
+        delete p ; //vai deletar o que está alocado no p atual
+        p = t; // t vai incrementar p 
+    }
+}
 
 void ListaEncad :: insereInicio(int val)
 {
@@ -48,7 +64,7 @@ bool ListaEncad :: busca(int val)
 
     //podemos fazer o mesmo com um for 
     /*
-    for(no*p = primeiro ; p !=null ; p = p->getprox)
+    for(no*p = primeiro ; p !=nullptr ; p = p->getprox)
         if...
     */
 }
