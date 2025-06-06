@@ -9,5 +9,5 @@ class ListaEncad{
 
     void insereInicio(int val);
     bool busca(int val);
-    void removeInicio(int val);
+    void removeInicio();
 };
