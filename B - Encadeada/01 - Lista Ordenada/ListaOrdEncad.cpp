@@ -42,11 +42,6 @@ void ListaOrdEncad :: insere(int val)
         ant->setProx(p);
         p->setProx(atual);
     }
-    
-
-    p->setProx(primeiro);   
-
-    primeiro = p; 
 
 }
 bool ListaOrdEncad :: busca(int val)
