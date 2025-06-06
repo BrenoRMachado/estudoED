@@ -1,6 +1,5 @@
 class No{
     private:
-
     int info; 
     No *prox; 
 
@@ -13,5 +12,4 @@ class No{
 
     void setInfo(int val); 
     void setProx(No *p);
-
 };
