@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ArvBin.h"
+using namespace std;
 
 ArvBin :: ArvBin()
 {
@@ -13,7 +14,15 @@ ArvBin :: ~ArvBin()
 
 int ArvBin :: getRaiz()
 {
-    return raiz->getInfo();
+    if(raiz != nullptr) //se a raiz não estiver vazia
+    {
+        return raiz->getInfo();
+    }
+    else
+    {
+        cout << "Árvore vazia" << endl;
+        exit(1); 
+    }
 }
 
 void ArvBin :: cria(int val, ArvBin *sae, ArvBin *sad)
@@ -23,7 +32,7 @@ void ArvBin :: cria(int val, ArvBin *sae, ArvBin *sad)
 
 bool ArvBin :: vazia()
 {
-
+    return raiz == nullptr; //verifica se a árvore está vazia pela raiz
 }
 
 void ArvBin :: imprime()
