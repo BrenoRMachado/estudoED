@@ -10,7 +10,7 @@ ArvBin :: ArvBin()
     
 ArvBin :: ~ArvBin()
 {
-
+    libera(raiz);
 }
 
 int ArvBin :: getRaiz()
@@ -188,4 +188,18 @@ NoArv * ArvBin :: auxInsere(NoArv*p, int val)
         }
     }
     return p;
+}
+
+
+//auxiliar do construtor
+
+void ArvBin :: libera(NoArv*p)
+{
+    if( p != nullptr)
+    {
+        libera(p->getEsq());
+        libera(p->getDir());
+        delete p;
+    }
+    //é uma passagem pós ordem
 }

@@ -32,4 +32,8 @@ class ArvBin {
     void insere(int val);
     NoArv * auxInsere(NoArv* p, int val);
     // monta arvore inserindo nó, a ordem acaba ficando na conta do usuário. usamos a insere várias vezes para cada nó
+
+    //auxiliar do construtor
+
+    void libera(NoArv*p);
 };
