@@ -51,7 +51,7 @@ bool ArvBin :: vazia()
 
 void ArvBin :: imprime()
 {
-    //precisa usar percurso. Nesse caso um pré-ordem
+    //precisa usar percurso. Vamos usar o pré-ordem primeiro
     auxImprime(raiz);
 }
 
@@ -65,6 +65,27 @@ void ArvBin :: auxImprime(NoArv *p)
         auxImprime(p->getDir());
     }
 }
+
+/*
+Função para impressão em ordem 
+
+void ArvBin::auxImprime(NoArv *p) { // em ordem
+    if (p != NULL) {
+        auxImprime(p->getEsq());
+        cout << p->getInfo() << " ";
+        auxImprime(p->getDir());
+    }
+}
+
+Função para impressão em pós-ordem 
+void ArvBin::auxImprime(NoArv *p) { // pos-ordem
+    if (p != NULL) {
+        auxImprime(p->getEsq());
+        auxImprime(p->getDir());
+        cout << p->getInfo() << " ";
+    }
+}
+*/
 
 bool ArvBin :: busca(int val)
 {
