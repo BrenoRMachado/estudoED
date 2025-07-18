@@ -28,6 +28,19 @@ int ArvBin :: getRaiz()
 
 void ArvBin :: cria(int val, ArvBin *sae, ArvBin *sad)
 {
+    //sae é subárvore a esquerda e Sad é subárvore a direita
+
+    NoArv * p = new NoArv(); 
+    p->setInfo(val);
+    p->setEsq(sae->raiz);
+    p->setDir(sad->raiz);
+
+    raiz = p;
+
+    //cria um nó p e define ele como uma raiz
+    // concede a ele uma subárvore a esqurda ou a direita
+    // pode ser subarvores com nós ou nula 
+    // como cria é um método de arvbin, ele tem acesso a atributos privados da classe ArvBin
 
 }
 
