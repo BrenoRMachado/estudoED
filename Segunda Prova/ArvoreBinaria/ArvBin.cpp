@@ -191,7 +191,7 @@ NoArv * ArvBin :: auxInsere(NoArv*p, int val)
 }
 
 
-//auxiliar do construtor
+//auxiliar do destrutor
 
 void ArvBin :: libera(NoArv*p)
 {
@@ -202,4 +202,34 @@ void ArvBin :: libera(NoArv*p)
         delete p;
     }
     //é uma passagem pós ordem
+}
+
+
+// percurso em largura
+
+int ArvBin :: altura()
+{
+    // a altura de um nó é a distância entre o nó e seu descentente mais afastado(folha)
+    // árvore vazia tem altura -1 e quando só tem 1, a altura é 0
+    return auxAltura(raiz);
+}
+
+
+int ArvBin :: auxAltura(NoArv*p)
+{
+    if(p == nullptr)
+    {
+        return -1;
+    }else
+    {
+        int he = auxAltura(p->getEsq());
+        int hd = auxAltura(p->getDir());
+        if(he>hd)
+        {
+            return 1 + he;
+        }else
+        {
+            return 1 + hd;
+        }
+    }
 }

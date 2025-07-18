@@ -5,6 +5,9 @@ class ArvBin {
 
     NoArv* raiz;
 
+    //percurso em largura
+    int altura();
+
     public:
 
     ArvBin();
@@ -36,4 +39,8 @@ class ArvBin {
     //auxiliar do construtor
 
     void libera(NoArv*p);
+
+
+    //percurso em largura
+    int auxAltura(NoArv*p);
 };
