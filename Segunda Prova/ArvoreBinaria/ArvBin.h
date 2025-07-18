@@ -43,4 +43,6 @@ class ArvBin {
 
     //percurso em largura
     int auxAltura(NoArv*p);
+
+    void percursoLargura();
 };

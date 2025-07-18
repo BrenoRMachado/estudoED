@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ArvBin.h"
 #include <sstream>
+#include "FilaEncad.h"
 using namespace std;
 
 ArvBin :: ArvBin()
@@ -232,4 +233,30 @@ int ArvBin :: auxAltura(NoArv*p)
             return 1 + hd;
         }
     }
+}
+
+
+
+void ArvBin:: percursoLargura()
+{
+    if (raiz != nullptr)
+    {
+        NoArv* p;
+        FilaEncad f;
+        f.enfileira(raiz);
+        while(!f.vazia)
+        {
+            p = f.desenfileira();
+            cout << p->getInfo() <<endl;
+            if(p->getEsq() != nullptr)
+            {
+                f.enfileira(p->getEsq());
+            }
+            if(p->getDir() != nullptr)
+            {
+                f.enfileira(p->getDir());
+            }
+        }
+    }
+    
 }
