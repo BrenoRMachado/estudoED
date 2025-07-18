@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ArvBin.h"
+#include <sstream>
 using namespace std;
 
 ArvBin :: ArvBin()
@@ -118,4 +119,35 @@ bool ArvBin :: auxBusca(NoArv* p , int val)
     //o nó da subarvore 
     // isso vai fazer verificar a árvore toda, quando chegar nos filhos das folhas, ou seja: nullptr, há sabe que não tá lá
 
+}
+
+
+
+void ArvBin :: montaArvore()
+{
+    if(raiz != nullptr)
+    {
+        raiz = auxMontaArvore();
+    }
+}
+NoArv* ArvBin ::  auxMontaArvore()
+{
+    string linha;
+    cin >> linha;
+    if(linha !=  "null" && linha != "NULL")
+    {
+        istringstream ent (linha);
+        int val;
+        ent >> val;
+
+        NoArv * p = new NoArv(); 
+        p->setInfo(val);
+        p->setEsq(auxMontaArvore());
+        p->setDir(auxMontaArvore());
+        return p; 
+    }
+    else 
+    {
+        return nullptr;
+    }
 }

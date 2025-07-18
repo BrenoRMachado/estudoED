@@ -22,4 +22,10 @@ class ArvBin {
     bool busca(int val);
     bool auxBusca(NoArv *p , int val);
 
+
+    //mais opções de montar árvore
+
+    void montaArvore();
+    NoArv * auxMontaArvore(); //monta de forma recursiva, permite criar tudo de uma vez. 
+    //a cria() criava apenas um pedaço. permitia unir árvores já existentes, criando cada uma.
 };
