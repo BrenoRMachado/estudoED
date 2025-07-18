@@ -17,6 +17,7 @@ class ArvBin {
     bool vazia();
 
     void imprime();
+    void auxImprime(NoArv* p);
 
     bool busca(int val);
 

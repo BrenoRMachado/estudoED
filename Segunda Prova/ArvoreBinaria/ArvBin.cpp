@@ -51,7 +51,19 @@ bool ArvBin :: vazia()
 
 void ArvBin :: imprime()
 {
+    //precisa usar percurso. Nesse caso um pré-ordem
+    auxImprime(raiz);
+}
 
+void ArvBin :: auxImprime(NoArv *p)
+{
+    //fiz sem precisar olhar, hehe
+    if( p!= nullptr)
+    {
+        cout << p->getInfo() << " ";
+        auxImprime(p->getEsq());
+        auxImprime(p->getDir());
+    }
 }
 
 bool ArvBin :: busca(int val)
