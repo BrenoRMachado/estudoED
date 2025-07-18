@@ -121,14 +121,18 @@ bool ArvBin :: auxBusca(NoArv* p , int val)
 
 }
 
-
+// montagem recursiva: 
 
 void ArvBin :: montaArvore()
 {
-    if(raiz != nullptr)
+    if(!vazia())
     {
+        cout << "Arvore montada" << endl;
+    }
+    else {
         raiz = auxMontaArvore();
     }
+    //se pressupoe que monta a árvore tudo de uma vez, por isso a crítica
 }
 NoArv* ArvBin ::  auxMontaArvore()
 {
@@ -150,4 +154,38 @@ NoArv* ArvBin ::  auxMontaArvore()
     {
         return nullptr;
     }
+}
+
+
+// Montagem por nós:
+
+void ArvBin :: insere(int val)
+{
+    raiz = auxInsere(raiz, val);
+    // monta nó por  vez, por isso sem crítica
+}
+NoArv * ArvBin :: auxInsere(NoArv*p, int val)
+{
+    if( p == nullptr)
+    {
+        p = new NoArv();
+        p->setInfo(val);
+        p->setEsq(nullptr);
+        p->setDir(nullptr);
+        //se ta vazia, cria uma raiz-folha
+    }
+    else 
+    {
+        char direcao;
+        cin >> direcao;
+        if(direcao == 'e' || direcao == 'E')
+        {
+            p->setEsq(auxInsere(p->getEsq(),val));
+        }
+        else
+        {
+            p->setDir(auxInsere(p->getDir(),val));
+        }
+    }
+    return p;
 }

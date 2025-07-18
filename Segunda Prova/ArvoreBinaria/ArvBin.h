@@ -28,4 +28,8 @@ class ArvBin {
     void montaArvore();
     NoArv * auxMontaArvore(); //monta de forma recursiva, permite criar tudo de uma vez. 
     //a cria() criava apenas um pedaço. permitia unir árvores já existentes, criando cada uma.
+
+    void insere(int val);
+    NoArv * auxInsere(NoArv* p, int val);
+    // monta arvore inserindo nó, a ordem acaba ficando na conta do usuário. usamos a insere várias vezes para cada nó
 };
