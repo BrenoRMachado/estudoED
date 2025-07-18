@@ -20,5 +20,6 @@ class ArvBin {
     void auxImprime(NoArv* p);
 
     bool busca(int val);
+    bool auxBusca(NoArv *p , int val);
 
 };

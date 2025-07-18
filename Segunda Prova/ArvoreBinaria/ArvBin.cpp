@@ -89,5 +89,33 @@ void ArvBin::auxImprime(NoArv *p) { // pos-ordem
 
 bool ArvBin :: busca(int val)
 {
+    return auxBusca(raiz, val); 
+}
+
+bool ArvBin :: auxBusca(NoArv* p , int val)
+{
+    //segue um percurso pré-ordem
+    if(p == nullptr)
+    {
+        return false;
+    }
+    else if( val == p->getInfo())
+    {
+        return true;
+    }
+    else if(auxBusca(p->getEsq(), val))
+    {
+        return true;
+    }
+    else 
+    {
+        return auxBusca(p->getDir(), val);
+    }
+
+    // se a arvore ta vazia, o nó não tá lá 
+    // ai vé se a info do nó atual é igual a val
+    // ai vê se a info das subárvores é igual, pra isso chama recursivamente passando
+    //o nó da subarvore 
+    // isso vai fazer verificar a árvore toda, quando chegar nos filhos das folhas, ou seja: nullptr, há sabe que não tá lá
 
 }
