@@ -4,7 +4,9 @@ using namespace std;
 
 NoArv :: NoArv()
 {
-
+    info = 0;
+    esq = nullptr;
+    dir = nullptr;
 }
 NoArv ::  ~NoArv()
 {
